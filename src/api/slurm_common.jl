@@ -171,6 +171,9 @@ const GRES_ENFORCE_BIND = 0x00000010
 const TEST_NOW_ONLY = 0x00000020
 const NODE_MEM_CALC = 0x00000040
 const NODE_REBOOT = 0x00000080
+const BITSTR_SHIFT_WORD8 = 3
+const BITSTR_SHIFT_WORD32 = 5
+const BITSTR_SHIFT_WORD64 = 6
 const BITSTR_SHIFT = BITSTR_SHIFT_WORD32
 const ALLOC_SID_ADMIN_HOLD = 0x00000001
 const ALLOC_SID_USER_HOLD = 0x00000002
@@ -530,7 +533,7 @@ const ESLURM_MISSING_TIME_LIMIT = (UInt32)(8000)
 const ESLURM_INVALID_KNL = (UInt32)(8001)
 # end enum ANONYMOUS_1
 
-typealias slurm_addr_t sockaddr_in
+typealias slurm_addr_t Void #sockaddr_in
 
 immutable slurm_job_credential
 end
