@@ -60,3 +60,6 @@ end
 function pid2jobid(pid)
   slurm_pid2jobid
 end
+
+# slurm_complete_job
+# slurm_kill_job

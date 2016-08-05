@@ -1,0 +1,12 @@
+# slurm_init_job_desc_msg
+# slurm_job_will_run
+
+# slurm_allocate_resources
+# slurm_confirm_allocation
+# slurm_free_resource_allocation_response_msg
+
+# slurm_allocate_resources_and_run
+# slurm_free_resource_allocation_and_run_response_msg
+
+# slurm_submit_batch_job
+# slurm_free_submit_response_response_msg
