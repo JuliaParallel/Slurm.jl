@@ -42,5 +42,4 @@ Base.done(::Hostlist, state) = state == C_NULL
 Base.next(hl:: Hostlist, state) = unsafe_string(state), shift(hl)
 Base.eltype(::Hostlist) = String
 Base.iteratorsize(::Type{Hostlist}) = Base.SizeUnknown()
-Base.iteratoreltype(::Type{Hostlist}) = Base.HasEltype()
 
