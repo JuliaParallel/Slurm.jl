@@ -9,7 +9,7 @@ import Slurm: api
 type JobTable
   jobs :: Ptr{api.job_info_msg_t}
 
-  function Jobs(jobs :: Ptr{api.job_info_msg_t})
+  function JobTable(jobs :: Ptr{api.job_info_msg_t})
     jtable = new(r_jobs[])
     finalizer(jtable, delete)
     return jtable
@@ -42,7 +42,7 @@ function getindex(jt :: JobTable, i)
   unsafe_load(jobs, i)
 end
 
-typealias Job api.slurm_job_info_t
+typealias JobInfo api.slurm_job_info_t
 
 # slurm_get_rem_time
 # slurm_get_end_time
@@ -53,13 +53,9 @@ typealias Job api.slurm_job_info_t
 # slurm_job_cpus_allocated_str_on_node
 # slurm_job_cpus_allocated_str_on_node_id
 
-function notify()
-  slurm_notify_job
-end
+# slurm_notify_job
 
-function pid2jobid(pid)
-  slurm_pid2jobid
-end
+# slurm_pid2jobid
 
 # slurm_complete_job
 # slurm_kill_job
