@@ -1,7 +1,5 @@
 # Automatically generated using Clang.jl wrap_c, version 0.0.0
 
-using Compat
-
 const SYSTEM_DIMENSIONS = 1
 const HIGHEST_DIMENSIONS = 5
 const HAVE_SYS_SOCKET_H = 1
